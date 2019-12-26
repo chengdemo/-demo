@@ -1,0 +1,391 @@
+
+    *{
+        border:0;margin:0;
+        padding:0;outline:0;
+        font-size:14px;
+        color:#6A6A6A;
+        list-style:none;
+
+    }
+    body{
+        width:1920px;
+        margin:0 auto;
+    }
+    a{
+        text-decoration:none;
+    }
+ header{
+        margin:0 auto;
+        width:1920px;
+    }
+    /* 商城登录选项第一排 */
+ #content{
+        width:1200px;
+        margin:0 auto;
+    }
+            #content .right{
+                text-align:right;
+
+            }
+            #content td{
+                padding:5px 0px;
+            }
+            #content .right{
+                    width:500px;
+                    padding:5px 0px;
+
+            }
+            #content .left{
+                width:989px;
+            }
+
+                #content img{
+                    vertical-align: bottom;
+                    width:18px;
+
+                }
+
+/* 搜索栏集logo */
+#sousuo{
+    width:1920px;;height:90px;
+    border-top:1px solid #6A6A6A;
+    position: relative;
+}
+
+            #sousuo div{
+                height:40px;width:500px;
+                border:3px solid #f00;
+                position:absolute;
+                position: relative;
+                
+                margin:20px auto;
+            
+                
+            }
+            #sousuo>a{
+                border:1px solid #e8e8e8;
+                position:absolute;
+                top:37px;left:1452px;
+                padding: 5px 10px;
+                border-radius: 2px;
+                padding-left:25px;
+              
+                
+            }
+            #sousuo>a img{
+                vertical-align: middle;
+                width:18px;
+                position:absolute;
+                top:5px;left:6px;
+            }
+           
+           #sousuo li{
+               float: left;
+               text-align: center;
+               line-height: 40px;
+               
+           }
+           #sousuo .xiala{
+            width:100px;height:40px;
+            background:#F9F9F9;
+            margin:0px 0px;
+            
+            }
+            #sousuo .center{
+                width:320px;height:38px;
+                text-align: left;
+            }
+            #sousuo .ss{
+                width:80px;height:42px;
+                background:#f00;
+               
+                
+            }
+            #sousuo .ss a{
+                color:#fff;
+                font-size:18px;
+            }
+            #sousuo img{
+                position: absolute;
+                top:17px;left:357px;
+            }
+     
+
+ #lbt{
+     position: relative;
+     width:100%;height: 500px;
+
+         }
+         /* 轮播图 */
+         /* 轮播背景图 */
+        @keyframes lunbo{
+			0%{transform:translate(-0px,0px)}
+			20%{transform:translate(-0px,0px)}
+			25%{transform:translate(-1920px,0px)}
+			45%{transform:translate(-1920px,0px)}
+			50%{transform:translate(-3840px,0px)}
+			70%{transform:translate(-3840px,0px)}
+			75%{transform:translate(-5760px,0px)}
+			90%{transform:translate(-5760px,0px)}
+			95%{transform:translate(-7680px,0px)}
+			100%{transform:translate(-7680px,0px)}
+        }
+        
+        #lunbotu{
+            width:1920px;height:500px;
+			display:flex; 
+			overflow:hidden;
+        }
+       
+        
+        #lunbotu img{
+            width:1920px;height:500px;
+            animation: lunbo 5s linear 1s infinite normal ;
+                }
+        #lbt .dd li {
+            width:40px;height: 0px;
+            border:2px solid #000;
+            border-radius: 2px;
+            margin:0px 6px;
+            float: left;
+            position: relative;
+            top:-15px;left:900px;
+            
+        }
+
+    #biaoti{
+        width:100%;height:44px;
+        border-bottom:2px solid rgb(255, 0, 0);
+        
+    }
+        #biaoti>div{
+            width:1200px;
+            margin:auto;
+            padding:10px 
+        }
+        #biaoti>div a{
+            font-size:18px;
+            padding:0px 50px;
+            border-left:1px solid #6A6A6A;
+            color:#000;
+            
+            
+        }
+        #biaoti>div .a1{
+            width:50px;
+            background:#f00;
+            color:#fff;
+            padding:11px 5px;
+            padding-right:172px;
+            text-align:left;
+            border-top-left-radius: 2px;
+            border-top-right-radius: 2px;
+            border:0px;
+        }
+        #biaoti>div .a2{
+            border:0px;
+        }
+        
+       
+        /*红色导航栏*/
+        #daohang{
+            width:249px;height:410px;
+            background:#F1373D;
+            
+            position: absolute;
+            top:0px;left:360px;
+            
+        }
+        #daohang p{
+            color:#fff;
+            padding:5px 5px 5px 29px;
+        }
+        #daohang p a{
+            color:#fff;
+            margin:0px 5px;
+        }
+        /* 下拉菜单小图标 */
+         #daohang p:nth-child(1){
+            background-image:url("../images/s1.png");
+            background-position: 11px 6px;
+            background-repeat: no-repeat;
+        }
+        #daohang p:nth-child(2){
+            background-image:url("../images/s2.png");
+            background-position: 11px 6px;
+            background-repeat: no-repeat;
+        }
+            
+        #daohang p:nth-child(3){
+            background-image:url("../images/s3.png");
+            background-position: 11px 6px;
+            background-repeat: no-repeat;
+        }
+        #daohang p:nth-child(4){
+            background-image:url("../images/s4.png");
+            background-position: 11px 6px;
+            background-repeat: no-repeat;
+        }
+        #daohang p:nth-child(5){
+            background-image:url("../images/s5.png");
+            background-position: 11px 6px;
+            background-repeat: no-repeat;
+        }
+        #daohang p:nth-child(6){
+            background-image:url("../images/s6.png");
+            background-position: 11px 6px;
+            background-repeat: no-repeat;
+        }
+        #daohang p:nth-child(7){
+            background-image:url("../images/s7.png");
+            background-position: 11px 6px;
+            background-repeat: no-repeat;
+        }
+            #daohang p:nth-child(1):hover,#daohang p:nth-child(2):hover,#daohang p:nth-child(3):hover,#daohang p:nth-child(4):hover,#daohang p:nth-child(5):hover,#daohang p:nth-child(6):hover,#daohang p:nth-child(7):hover{
+            background-color:rgb(218, 7, 21);}
+            
+    section{
+        width:1200px;
+        margin:auto;
+
+    }
+    /* 产品展示栏 */
+   
+   .yilou{
+        border-bottom:2px solid #FF7900;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        height:50px;
+        color:#666666;
+        
+    }
+    .yilou .left a{
+        font-size:18px;
+    }
+    .yilou .left img{
+        vertical-align: middle;
+    }
+    .yilou .right a{
+        font-size:14px;
+    }
+    .zhanshi{
+        background:#F8F8F8; 
+    }
+    .zhanshi .chuchuang li img{
+        width:200px;height:200px;
+    }
+    
+    .chuchuang{
+        
+        display:flex;
+        justify-content: space-between;
+        margin-bottom:30px;
+        
+    }
+    .zhanshi .chuchuang li{
+        width:200px;height:278px;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        padding:28px 19px;
+        padding-bottom: 5px;
+        position: relative;
+        overflow: hidden;
+      
+    }
+    .zhanshi .chuchuang li p{
+        color:#F10215;
+        font-weight: bold;
+
+    }
+    .zhanshi .chuchuang li a{
+        margin:10px 0px;
+    }
+    .zhanshi .chuchuang li:hover{
+        box-shadow: 0px 2px 2px 2px #ddd;
+        
+    }
+    .zhanshi .chuchuang li:hover .gm{
+        width:100%;height:40px;
+        background:#f00;
+        position:absolute;
+        bottom:0px;
+        text-align: center;
+        line-height: 40px;
+        animation: tancu 0.3s linear infinite;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+    }
+    
+    @keyframes tancu{
+        0%{transform:translate(0px,30px)}
+       100%{transform:translate(0px,0px)}
+    }
+    
+    .zhanshi .chuchuang li .gm a{
+        color:#fff;
+    }
+    /* 尾部 */
+    footer{
+        background:#F7F7F7;
+    }
+    /* 优点展示 */
+    footer #footer_1{
+        display:flex;
+        justify-content: space-between;
+        width:1200px;
+        margin:auto;
+        border-bottom:1px solid #DDDDDD;
+
+    }
+    footer #footer_1 li{
+        font-size:18px;
+        color:#474544;
+        margin:50px 0px;
+        
+
+    }
+    footer #footer_1 li span{
+        font-size:24px ;
+        color:#f00;
+        background-image:url("../images/footer-ico-span.png");
+        background-repeat: no-repeat;
+        background-position: 10px 13px;
+        padding:20px;
+        
+    }
+    /* 公司公告 */
+    #footer_dh{
+        width:1200px;
+        margin:0px auto;
+        padding-top:30px;
+        padding-bottom:20px;
+        border-bottom:1px solid #ddd;
+        display:flex;
+        justify-content: space-between;
+
+    }
+    #footer_dh p{
+        font-weight:bold ;
+        color:#000;
+        margin-bottom:10px;
+
+    }
+    #footer_dh li{
+        
+        margin:0px 50px;
+        margin-bottom:10px;
+    }
+    #footer_dh li img{
+        width:112px;
+    }
+    #footer_dh :nth-child(5) p,#footer_dh :nth-child(6) p{
+        text-align:center;
+    }
+    /* 尾部商城信息 */
+    footer>div>p{
+        height:60px;
+        text-align: center;
+        line-height: 60px;
+    }

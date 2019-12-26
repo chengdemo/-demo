@@ -1,0 +1,258 @@
+//check全部选定
+function CheckAll(obj) {
+    var flag = $(obj).prop('checked');
+    $("input[name='cbxID']").each(function () {
+        $(this).prop('checked', flag);
+    });
+}
+//加减数量
+function num(obj, add,callback)
+{
+    var o =$(obj).val();var v=0;
+    if(o==''||isNaN( parseInt(o)))
+    {
+        $(obj).focus();return;
+    }
+    v = parseInt(o);
+    if(add)
+    {
+        v++;
+    }
+    else
+    {
+        if (v > 1)
+        {
+            v--;
+        }
+    }
+    if (v > 500) {
+        v = 500;
+    }
+    $(obj).val(v);    
+    if (callback != null) {
+        cartcheckkc(obj, v);
+        callback();
+    }
+    else
+    {
+        checkkc(v);
+    }
+}
+function checknum(obj,cout)
+{
+    var n = $(obj).val(); 
+    var num = parseInt(n);
+    if (isNaN(parseInt(n)))
+    {
+        num = 1;
+    }
+    if (num > 500) { num = 500;}
+    $(obj).val(num);
+    if (cout) {
+        cartcheckkc(obj,num);
+        countmoney();
+    }
+    else
+    {
+        checkkc(n);
+    }
+}
+function cartcheckkc(obj,n)
+{
+    var msg = $(obj).parent().parent().parent().find('.ui-msg');
+    var k = parseInt($(msg).attr('kc'));
+    var p = $(msg).find('p');
+    var m = '';
+    if (n > k) {
+        m = (n-k)+'个商品无库存，生产周期预计20天。';
+        $(msg).show();
+    } else {
+        $(msg).hide();
+    }
+    $(p).html(m);
+}
+function checkkc(v) {
+    var kc = parseInt($('#sc').html());
+    if (v > kc) {
+        $('.ui-msg').show();
+    } else { $('.ui-msg').hide(); }
+}
+//计算总金额
+function countmoney()
+{
+    var m = 0.00; var num = 0;
+    $("[name='cbxID']:checkbox").each(function ()
+    {
+        var id = $(this).val();
+        var cbx = $('#num' + id);
+        var v = parseInt(cbx.val());
+        var p = cbx.attr('pr');
+        var xj = (p * v).toFixed(2);
+        $('#xj' + id).html('&yen;' + xj);
+        if ($(this).prop('checked'))
+        {  
+            m += p * v;
+            num++;
+        }
+    });
+    $('#num').html(num);
+    $('.sumPrice').html('<em>&yen; ' + m.toFixed(2) + '</em>');
+}
+//套餐产品数量计算
+function packnum(obj)
+{    
+    var pack = $(obj).parent().find('li');
+    if(pack.length>1)
+    {
+        var n = $(pack[0]).find('.input input').val();
+        $(pack).each(function (i)
+        {
+            if(i>0)
+            {
+                var num = $(this).find('.input input').attr('dd');
+                num = n * num;
+                $(this).find('.input input').val(num);
+            }
+        });
+    }
+}
+//产品详细切换属性
+function csperty()
+{
+    $('#perty span').bind('click', function ()
+    {
+        var showtip = false;
+        var pt = $(this).attr('pt');
+        var ct = $(this).attr('ct');
+        var tip = $(this).attr('tip');
+        var pr = istip == 'True' ? $(this).attr('tip') : $(this).attr('price');
+        var tp = $(this).attr('price');
+        var ut= $(this).attr('unit');
+        $('#txtperty').val(pt); 
+        $('.tm-price').html(pr);
+        $('#sc').html(ct + ut);
+        $('#tprice').html(tp);
+        if (istip =='True')
+        {
+            if (tip != tp)
+            {
+                showtip = true;
+            }
+        }
+        if(showtip)
+        {
+            $('.info_sales_price_p i').show();
+            $('.info_sales_price_p del').show();
+        }
+        else
+        {
+            $('.info_sales_price_p i').hide();
+            $('.info_sales_price_p del').hide();
+        }
+        checknum($('#buy-num'), false);
+    });
+    $('#perty img').bind('click', function () {        
+        var $bigList = $('#bigImgList');
+        var url = $(this).attr('purl'); var index = 0;
+        $('.owl-item img').each(function () {
+            if ($(this).attr('src') == url) {
+                $(this).addClass('selected').parent().siblings().children().removeClass('selected');
+                $(this).parent().addClass('selected');
+                $bigList.find('.MagicZoom').removeClass('show');
+                $bigList.find('.MagicZoom:eq(' + index + ')').addClass('show');
+            } else { $(this).parent().removeClass('selected'); } index++;
+        });
+        $('.dd').removeClass('on');
+        $('.pack').each(function ()
+        {
+            $(this).removeClass('on');
+            $(this).parents('http://www.shi.cn/js/div.dd').removeClass('on');
+        });
+    });
+}
+function setmeum(m) {
+    $('.my-menu a').each(function () {
+        var h = $(this).attr('href');
+        if (h == m) {
+            $(this).parent().addClass('active');
+        }
+    });
+    $('.menu a').each(function () {
+        var h = $(this).attr('href');
+        if (h == m) {
+            $(this).parent().addClass('active');
+        }
+    });
+}
+function setcart(m) {
+    $('.reset_line em').each(function () {
+        var h = $(this).html();
+        if (m.indexOf(h)>-1) {
+            $(this).parent().addClass('on');
+        }
+    });
+}
+function setorder(m) {
+    $('.appStepbar span').each(function () {
+        var h = $(this).html();
+        if (m.indexOf(h) > -1) {
+            $(this).parent().addClass('active');
+        }
+    });
+}
+function search(mb)
+{
+    var k = $('#schkey').val();
+    if (mb)
+    {
+        k = $('#schmkey').val();
+    }
+    if(k=='')
+    {
+        Dialog.Tip('请输入搜索词!', '0'); return false;
+    }
+}
+var browserVersion = window.navigator.userAgent.toUpperCase();
+var isOpera = browserVersion.indexOf("OPERA") > -1 ? true : false;
+var isFireFox = browserVersion.indexOf("FIREFOX") > -1 ? true : false;
+var isChrome = browserVersion.indexOf("CHROME") > -1 ? true : false;
+var isSafari = browserVersion.indexOf("SAFARI") > -1 ? true : false;
+var isIE = (!!window.ActiveXObject || "ActiveXObject" in window);
+var isIE9More = (! -[1, ] == false);
+function reinitIframe(iframeId, minHeight) {
+    try {
+        var iframe = document.getElementById(iframeId);
+        var bHeight = 0;
+        if (isChrome == false && isSafari == false)
+            bHeight = iframe.contentWindow.document.body.scrollHeight;
+
+        var dHeight = 0;
+        if (isFireFox == true)
+            dHeight = iframe.contentWindow.document.documentElement.offsetHeight + 2;
+        else if (isIE == false && isOpera == false)
+            dHeight = iframe.contentWindow.document.documentElement.scrollHeight;
+        else if (isIE == true && isIE9More) {//ie9+
+            var heightDeviation = bHeight - eval("window.IE9MoreRealHeight" + iframeId);
+            if (heightDeviation == 0) {
+                bHeight += 3;
+            } else if (heightDeviation != 3) {
+                eval("window.IE9MoreRealHeight" + iframeId + "=" + bHeight);
+                bHeight += 3;
+            }
+        }
+        else//ie[6-8]、OPERA
+            bHeight += 3;
+
+        var height = Math.max(bHeight, dHeight);
+        if (height < minHeight) height = minHeight;
+        iframe.style.height = height + "px";
+    } catch (ex) { }
+}
+function startInit(iframeId, minHeight) {
+    eval("window.IE9MoreRealHeight" + iframeId + "=0");
+    window.setInterval("reinitIframe('" + iframeId + "'," + minHeight + ")", 100);
+}
+function closebd(c)
+{
+    $(c).parent().parent('.container').hide();
+}

@@ -1,0 +1,108 @@
+body
+{
+	font-size: 14px;
+}
+a
+{
+	text-decoration: none;
+}
+
+.pop_dialog
+{
+	background: none repeat scroll 0 0 #B2B2B2;
+	z-index: 1000;
+	position: absolute;
+	
+}
+.pop_dialog:after{ content:''; display:inline-block; position:absolute; top:-8px; left:-8px; bottom:-8px; right:-8px; background:#B2B2B2; z-index:-1;}
+.pop_dialog-title
+{
+	height: 27px;
+	line-height: 27px;
+	padding: 0px 10px;
+	background: #CCC;
+}
+.pop_dialog-left
+{
+	float: left;
+	color:#545454;
+	font-weight: bold;
+	font-size: 12px;
+}
+.pop_dialog-title-close
+{
+	width: 11px;
+	height: 25px;
+	float:right;
+	cursor:pointer;
+	line-height:25px;
+}
+.fr
+{
+	float: right;
+	_display: inline;
+}
+.p15
+{
+	padding: 6px;
+}
+.pop_dialog-content
+{
+	text-align:center;
+	background: #fff;
+	z-index: 1000;
+}
+.pop_dialog-content td, .pop_dialog-content th 
+{
+    padding:0 !important;
+    font-size:12px;
+    vertical-align:middle;
+}
+/*-------------*/
+.hidediv
+{
+	background: #000;
+	opacity: 0.2;
+	filter: alpha(opacity=20);
+	position:fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	bottom: 0;
+	z-index: 80;
+}
+#dialogdivloading
+{
+	background: url("loading.gif")/*tpa=http://www.shi.cn/common/dialog/black/loading.gif*/ no-repeat 15px 3px;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 58px;
+	color: #666666;
+	font-size: 14px;
+	width: 130px;
+}
+.task_newbotton a
+{
+	background: url("buttonsbg.gif" )/*tpa=http://www.shi.cn/common/dialog/black/buttonsbg.gif*/ no-repeat scroll left top transparent;
+	color: #FFFFFF;
+	display: inline-block;
+	font-family: "ËÎÌו";
+	font-weight: bold;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	width: 80px;
+	font-size: 12px;
+}
+.task_newbotton a:hover
+{
+	background: url("buttonsbg.gif" )/*tpa=http://www.shi.cn/common/dialog/black/buttonsbg.gif*/ no-repeat scroll -80px top transparent;
+	color: #FFFFFF;
+	text-shadow: 1px 1px 0 #545454;
+}
+.trborder
+{
+	border-top:1px solid #DADEE5;
+	padding-top:8px;
+}

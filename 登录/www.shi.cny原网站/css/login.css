@@ -1,0 +1,122 @@
+@charset "utf-8";
+/* CSS Document */
+body{ font-size:14px; color:#666; font-family:"微软雅黑"; line-height:30px;}
+*{ margin:0px; padding:0px;}
+ul,li,ol{ list-style:none;}
+ul,li,ol,p,h1,h2,h3,h4,h5,h6,p{ margin:0px; padding:0px;}
+em,i{ font-style:normal;}
+/*文字和链接*/
+input{outline: none;-webkit-appearance: none;border-radius: 0;}
+a{color:#666; text-decoration:none; outline:none; cursor:pointer;}/*默认*/
+a:hover{color:#666; text-decoration:none;}
+
+.login-header{ padding:30px 0;}
+.login-header h1 em{ font-size:30px; font-weight:normal; margin-left:20px; font-weight:100; color:#666; position:relative; padding-left:15px;}
+.login-header h1 em:after{ content:''; position:absolute; top:9px; bottom:6px; width:1px; left:0px; background:#ddd;}
+.login-header .logo{ display:inline-block; float:left;}
+.reg-header{ background:url("../images/headbg.jpg")/*tpa=http://www.shi.cn/images/headbg.jpg*/ left bottom repeat-x; padding-bottom:40px;}
+.login-btn{ display:inline-block; float:right; font-size:18px; padding-top:20px;}
+.login-footer{ padding:30px 0; text-align:center;}
+.login-footer p{ line-height:45px;}
+.login-footer p a{ padding:0 20px; position:relative;}
+.login-footer p a:after{ content:''; display:inline-block;position:absolute; right:0px; top:5px; bottom:5px; background:#ddd; width:1px;}
+.login-footer p a:last-child:after{ display:none;}
+.banner{ position:relative;}
+.form{ position:absolute; left:0; top:70px; right:0px;}
+.login-box h6{ font-size:18px; color:#444; text-align:center; font-weight:400; margin-bottom:20px;}
+.login-box{width:400px; padding:30px 40px; float:right; background:#fff; color:#2A3F54;/*box-shadow: 0 0 10px #ddd; border:1px solid #ddd;*/}
+.login-box li{ padding:6px 0; line-height:46px;}
+.login-box li i{ margin-left:10px; font-style:normal;}
+.login-box li input[type='text'],.login-box li input[type='password']{ line-height:24px; border:solid 1px #ddd; padding:10px 15px; border-radius:5px; overflow:hidden; width:100%;}
+.login-box li input[type='text']:focus,.login-box li input[type='password']:focus{border-color: #66afe9;outline: 0; -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6); box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);}
+#code{ max-height:44px; vertical-align:middle; max-width:100px; line-height:44px;}
+.loginBtn{ border:none; outline:none; line-height:24px; padding:10px 0; background:#c81428; color:#fff;border-radius:5px; overflow:hidden; width:100%;}
+a.regBtn{ color:#c81428;}
+a.regBtn:hover{ color:#c81428;}
+
+.reg-form.login-box{width:500px; padding:50px; margin:50px auto 20px; background:#fff; color:#2A3F54;box-shadow: 0 0 10px #ddd; border:1px solid #ddd; float:none;}
+.reg-form li div.input{ position:relative; padding-left:100px; border:solid 1px #ddd;}
+.reg-form.login-box li input[type='text'],.reg-form.login-box li input[type='password']{ border:none; outline:none; padding:10px 5px; border-radius:0px;}
+.reg-form.login-box li input[type='text']:focus,.reg-form.login-box li input[type='password']:focus{border-color: #66afe9;outline: 0; -webkit-box-shadow:none;box-shadow:none;}
+.login-box li label{display:inline-block; width:90px; text-align:center; margin-right:10px; margin-bottom:0px; font-weight:normal; position:absolute; left:0px; top:0px; line-height:46px; color:#000; background:#f2f2f2;}
+.form-item-phonecode{ position:absolute; right:-2px; top:0px; bottom:0px;background: #ddd;}
+.btn-phonecode{ border:none; outline:none;background: #ddd;color: #333;padding: 0; width:100%; line-height:42px;}
+.tips{ height:24px; line-height:24px; font-size:12px; color:#c5c5c5; padding:0 5px;}
+.sj{ display:none;}
+.login-login-links{ line-height: 30px;;}
+.login-login-links a{ padding: 0; vertical-align: middle; display: inline-block;}
+.login-login-links a i{ font-size: 26px; color: #06b3ec;}
+.login-login-links a.weixin i{ color: #03ae1b;}
+.popup{ position: fixed; top: 0px; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,.5);}
+.popup-flex{display: flex;justify-content: center;align-items: center;}
+.poput-info{ width: 300px; margin: 20px auto; color: #fff; display:inline-block; position:absolute; top:50%;left:50%;transform:translate(-50%,-50%); text-align: center; font-family: "微软雅黑";}
+.popup-title{font-size: 20px; line-height: 60px;}
+.popup-tips{ font-size: 14px; padding: 5px;}
+.popup-coder{ width: 180px; margin: 0 auto;}
+.popup-coder img{ width: 100%;}
+
+.account{ border-bottom: solid 1px #ddd; margin-bottom: 10px;}
+.account li{display: inline-block; padding: 0 10px; line-height: 35px; border: solid 1px #ddd; margin-right: 5px; border-bottom: none; position: relative; cursor: pointer;}
+
+.account li.active:after{ content: ''; display: inline-block;; position: absolute; left: 0px; bottom:-2px; right: 0px; z-index: 1; background: #fff; height: 2px; }
+.code{ width: 80%;  text-align: center; margin:30px auto 0;}
+.code-img img{ max-width: 100%; }
+.code-p{ font-size: 22px; padding: 20px 0 0 0; }
+@media (max-width:470px){
+	input[type="text"],input[type="password"]{-webkit-appearance:none; /*去除input默认样式*/} 
+	.sj{ display:block;}
+	.form-item-phonecode{ background:none;}
+	.reg-header{ background:none; }
+	.login-header{ padding:10px 0 20px}
+	.login-header10{ height:10px; background:#ececec;border-top:solid 1px #ddd; border-bottom:solid 1px #ddd;}
+	.login-header .logo img{width:150px;}
+	.login-header .logo em{ font-size:22px; font-weight:bold;}
+	.reg-form.login-box{ width:96%;padding:10px 2%; border:none; margin:0 auto; box-shadow:none; }
+	.reg-form li div.input{ border-right:none; border-top:none; border-left:none;padding-left:0px;}
+	.login-box li label{ display:none;}
+	.tips{ height:auto;}
+	.form-item-phonecode{ right:5px; top:0px; padding-left: 0px; padding-right: 0px;}
+	.login-footer{ padding:10px 0 0 0;}
+	.login-footer .pc{ display:none;}
+	.login-btn{ display:none;}
+	.reg-form li:first-child div.input{ border-top:none;}
+	.sj-login-btn{ text-align:center;}
+	#owl-demo-banner{ display:none !important;}
+	.form{ position:relative; left:0px; right:0px; width:100%; top:0px;}
+	.login-box{ width:100%; float:none; padding:10px 0; overflow:hidden;}
+	.login-box h6{ display:none;}
+	.login-box li input[type='text'], .login-box li input[type='password']{padding:10px 15px; outline:none; font-size:16px;}
+	.banner{}
+	.login-box li:last-child{ padding-top:20px;}
+	.login-box .account { padding: 20px 0 0 0; }
+	.login-box .account li:last-child{ padding-top: 0px; }
+	.plabel{ text-align:center;}
+	.loginBtn{ font-size: 16px; }
+	}
+@media (max-width:425px){
+	.form-item-phonecode{ right:0px;}
+	}
+@media (max-width:375px){
+	.form-item-phonecode{ right:0px;}
+	
+	}
+@media (max-width:320px){
+	.form-item-phonecode{ right:0px;}
+	}
+.earn{ max-width:640px; width:100%; margin:50px auto 0;}
+.earn h1{ font-size:18px; text-align:center; padding:30px 0;}
+.earn .has{ padding:20px 15px; border:solid 1px #ddd; border-radius:10px; overflow:hidden;box-shadow: 0 0 10px #ddd;border: 1px solid #ddd; background:#fff;}
+.has li{ line-height:30px; padding:10px 0;}
+.has li h5{ font-size:20px;}
+.has li:last-child{ border-bottom:none; padding:20px 0;}
+.has li .input{ position:relative; padding-left:80px;}
+.has li .input label{ display:inline-block; width:80px; font-weight:normal; position:absolute; left:0px; text-align:right; padding-right:10px; color:#000; }
+.mpurl.has li .input label{ width: 90px; text-align: center; line-height: 44px;}
+.has li .input input{ border-top:none;  border-left:none;  border-right:none; outline:none; width:98%;border-bottom:solid 1px #cfcfcf; border-radius:0;}
+.earn li .form-item-phonecode{ top:-6px;}
+.has li:last-child.has-code{ padding:0;}
+.has-code-img{ text-align:center;}
+.has-code-img img{ width:80%; margin:0 auto;}
+@media (max-width:425px){
+	.mpurl.has li .input label{ display: none;}
+	}

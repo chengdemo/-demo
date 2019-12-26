@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset=utf-8"UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<title>å…è´¹æ³¨å†Œ - ç™¾çŸ³å•†åŸ</title>
+<!--æ¡†æ¶css-->
+<link href="css/bootstrap.css" tppabs="http://www.shi.cn/css/bootstrap.css" rel="stylesheet" type="text/css" />
+<!--bannerè½®æ’­æ’ä»¶css-->
+<link href="css/owl.carousel.css" tppabs="http://www.shi.cn/css/owl.carousel.css" rel="stylesheet" type="text/css" />
+<link href="common/dialog/black/css.css" tppabs="http://www.shi.cn/common/dialog/black/css.css" rel="stylesheet" type="text/css" />
+<!--é¡µé¢æ ·å¼-->
+<link href="css/login.css" tppabs="http://www.shi.cn/css/login.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-1.11.0.min.js" tppabs="http://www.shi.cn/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.form.js" tppabs="http://www.shi.cn/js/jquery.form.js"></script>
+<!--bannerè½®æ’­æ’ä»¶-->
+<script src="js/owl.carousel.js" tppabs="http://www.shi.cn/js/owl.carousel.js"></script>
+</head>
+<body>
+<div class="login-header reg-header">
+  <div class="container">
+    <div class="logo">
+      <h1><a href="javascript:if(confirm('http://www.shi.cn/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓëËüµÄÆôÊ¼µØÖ·ºÜÔ¶µÄÁ´½Ó¡£Èç¹ûÄãÔö´óÆôÊ¼µØÖ·ÓòÄÚÉî¶ÈÉèÖÃ, ¸ÃÎÄ¼ş½«±»¼ÓÈëÏÂÔØ¶ÓÁĞ¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.shi.cn/'" tppabs="http://www.shi.cn/"> <img src="images/logo.png" tppabs="http://www.shi.cn/images/logo.png" /><em>æ¬¢è¿æ³¨å†Œ</em></a></h1>
+    </div>
+    <div class="login-btn pc">
+      <p>å·²æœ‰è´¦å·ï¼Ÿ <a href="javascript:if(confirm('http://www.shi.cn/login.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓëËüµÄÆôÊ¼µØÖ·ºÜÔ¶µÄÁ´½Ó¡£Èç¹ûÄãÔö´óÆôÊ¼µØÖ·ÓòÄÚÉî¶ÈÉèÖÃ, ¸ÃÎÄ¼ş½«±»¼ÓÈëÏÂÔØ¶ÓÁĞ¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.shi.cn/login.html'" tppabs="http://www.shi.cn/login.html">è¯·ç™»å½•</a></p>
+    </div>
+  </div>
+</div>
+   <div class="login-header10"></div>
+<div class="reg-form login-box">
+  <form id="freg" method="post">
+    <ul>
+      <li>
+        <div class="input">
+          <label>æ‰‹æœºå·ç </label>
+          <input type="text" name="txtmobile" class="reg-text" placeholder="å»ºè®®ä½¿ç”¨å¸¸ç”¨æ‰‹æœº" />
+        </div>
+        <p class="tips">ä½ å¯ä»¥ç”¨è¯¥æ‰‹æœºå·ç ç™»å½•æ‰¾å›å¯†ç </p>
+      </li>
+      <li>
+        <div class="input">
+          <label>ç™»é™†å¯†ç </label>
+          <input type="password" name="txtpwd" class="reg-text" placeholder="è¯·ç‰¢è®°å¯†ç " />
+        </div>
+        <p class="tips">å»ºè®®ä½¿ç”¨å­—æ¯ã€æ•°å­—å’Œç¬¦å·ä¸¤ç§åŠä»¥ä¸Šçš„ç»„åˆï¼Œ6-20ä¸ªå­—ç¬¦</p>
+      </li>
+      <li class="clearfix">
+        <div class="input clearfix">
+          <label>éªŒè¯ç </label>
+          <div class="col-xs-7">
+            <input name="txtcode" type="text" class="reg-text row" placeholder="è¯·è¾“å…¥éªŒè¯ç " />
+          </div>
+          <div class="col-xs-5"> <img class="img-code" title="æ¢ä¸€æ¢" style="cursor: pointer" id="imgAuthCode" onclick="rdcode();" /></div>
+        </div>
+        <p class="tips">çœ‹ä¸æ¸…ï¼Ÿç‚¹å‡»å›¾ç‰‡æ›´æ¢éªŒè¯ç </p>
+      </li>
+        <li class="clearfix">
+        <div class="input clearfix">
+          <label>çŸ­ä¿¡éªŒè¯ç </label>
+          <div class="col-xs-8">
+            <input name="txtmsg"  type="text" placeholder="è¯·è¾“å…¥çŸ­ä¿¡éªŒè¯ç " class="reg-text row"/>
+          </div>
+          <div class="col-xs-4 form-item-phonecode"><input id="btget" type="button" value="è·å–éªŒè¯ç "  class="btn-phonecode" /></div>
+        </div>
+          <p class="tips">ç‚¹å‡»è·å–éªŒè¯ç </p>
+      </li>
+      <li>
+          <input name="cardid" type="hidden" value="0" />
+        <button id="btreg" type="button" class="loginBtn">ç«‹å³æ³¨å†Œ</button>
+         <p class="sj sj-login-btn">å·²æœ‰è´¦å·ï¼Ÿ <a href="javascript:if(confirm('http://www.shi.cn/login.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓëËüµÄÆôÊ¼µØÖ·ºÜÔ¶µÄÁ´½Ó¡£Èç¹ûÄãÔö´óÆôÊ¼µØÖ·ÓòÄÚÉî¶ÈÉèÖÃ, ¸ÃÎÄ¼ş½«±»¼ÓÈëÏÂÔØ¶ÓÁĞ¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.shi.cn/login.html'" tppabs="http://www.shi.cn/login.html">è¯·ç™»å½•</a></p>
+      </li>
+      <li class="plabel">
+        <input type="checkbox" name="agreen" checked="checked" value="1" />
+        æˆ‘åŒæ„ã€Š<a href="javascript:if(confirm('http://www.shi.cn/services.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓëËüµÄÆôÊ¼µØÖ·ºÜÔ¶µÄÁ´½Ó¡£Èç¹ûÄãÔö´óÆôÊ¼µØÖ·ÓòÄÚÉî¶ÈÉèÖÃ, ¸ÃÎÄ¼ş½«±»¼ÓÈëÏÂÔØ¶ÓÁĞ¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.shi.cn/services.html'" tppabs="http://www.shi.cn/services.html">ç™¾çŸ³å•†åŸç”¨æˆ·åè®®</a>ã€‹</li>
+    </ul>
+  </form>
+</div>
+    <div class="login-footer">
+        <!-- <p><a href="">å…³äºæˆ‘ä»¬</a><a href="">è”ç³»æˆ‘ä»¬</a><a href="">äººæ‰æ‹›è˜</a><a href="">å•†å®¶å…¥é©»</a><a href="">å¹¿å‘ŠæœåŠ¡</a><a href="">å‹æƒ…é“¾æ¥</a><a href="">é”€å”®è”ç›Ÿ</a></p>-->
+        <p>&copy;2017 www.shi.cn ç™¾çŸ³å•†åŸ</p>
+    </div>
+<script type="text/javascript">
+        document.onkeydown = function (e) {
+            if (!e) e = window.event;
+            {
+                if ((e.keyCode || e.which) == 13) {
+                    $('#btreg').click();
+                    return false;
+                }
+            }
+        }
+        function rdcode() {
+            $('#imgAuthCode').attr('src', ('/regcode.html?tp=reg&t=' + new Date().getTime()));
+        }
+        $(function () {
+            rdcode();
+            $('#btreg').bind('click', function () {
+                AjaxPost('http://www.shi.cn/join.html?act=post', 'freg');
+            });
+            $('#btget').click(function () {
+                PostData('freg', 'msg');
+            });
+        });
+        var count = 0;
+        function sentmsg(c) {
+            $("#btget").attr("disabled", "disabled");
+            count = c;
+            timeCount();
+        }
+        function timeCount() {
+            if (count == 0) {
+                $("#btget").removeAttr("disabled");
+                $("#btget").val("è·å–éªŒè¯ç ");
+            }
+            else {
+                $("#btget").attr("disabled", "disabled");
+                $("#btget").val("(" + count.toString() + ")ç§’åå†æ¬¡è·å–");
+                setTimeout("timeCount()", 1000);
+                count--;
+            }
+        }
+    </script>
+</body>
+</html>
